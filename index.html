@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Temperature Hot</title>
+    <title>Weather Temperature</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://img.icons8.com/external-anggara-glyph-anggara-putra/32/FFFFFF/external-weather-home-screen-anggara-glyph-anggara-putra.png" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -20,22 +21,24 @@
 
 <body>
     <div class="container">
-        <form class="col-md-6 m-auto py-5">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Enter a location for Weather ...">
+        <div class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3 w-100">
+                <input type="text" id="search-field" class="form-control" placeholder="Enter a location for Weather temperature">
                 <div class="input-group-append">
-                    <button type="button" class="btn btn-danger">Search</button>
+                    <button onclick="search()" type="submit" class="btn btn-danger">Search</button>
                 </div>
             </div>
-        </form>
+        </div>
         <div class="weather-status text-white text-center">
             <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
-            <h1>Dhaka</h1>
-            <h3><span>38.06</span>&deg;C</h3>
-            <h1 class="lead">Clouds</h1>
+            <h1 id="weather-location">Dhaka</h1>
+            <h3><span id="weather-temperature">38.06</span> <span id="deg-symbol">&deg;C</span></h3>
+            <h1 id="country" class="lead">Clouds</h1>
+            <div id="show-error-message"></div>
         </div>
     </div>
 
+    <script src="app.js"></script>
 </body>
 
 </html>
